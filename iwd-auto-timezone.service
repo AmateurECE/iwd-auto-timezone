@@ -1,0 +1,10 @@
+[Unit]
+Description=Automatic Timezone Updates
+Requires=iwd.service dbus.service
+After=iwd.service dbus.service
+
+[Service]
+ExecStart=/usr/bin/iwd-auto-timezone
+
+[Install]
+WantedBy=multi-user.target
